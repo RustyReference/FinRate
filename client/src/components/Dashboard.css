@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
 .dashboard-layout {
   max-width: 1280px;
   margin: 0 auto;
@@ -70,7 +71,7 @@
 }
 
 .last-scan {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.75rem;
   color: var(--text-secondary);
   white-space: pre-line;
@@ -78,8 +79,9 @@
 }
 
 .last-scan::before {
-  content: "Last scan\n";
-  color: var(--text-muted);
+  content: "Last scan";
+  {/*color: var(--text-muted);*/}
+  color: red;
 }
 
 /* Description */
@@ -196,4 +198,17 @@
   .db-asset-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f10, #222a41, #03195b);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

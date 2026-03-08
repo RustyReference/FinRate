@@ -18,22 +18,22 @@ const Dashboard: React.FC = () => {
       <header className="db-header">
         <div className="db-brand">
           <div className="db-logo">
-             <span className="logo-letter">M</span>
+             <span className="logo-letter">$</span>
           </div>
           <div className="db-brand-text">
-            <h1>Market Sentiment Dashboard</h1>
+            <h1>FinRate Dashboard</h1>
             <span className="db-subtitle">FINANCIAL AI ANALYSIS</span>
           </div>
         </div>
         
         <div className="db-status-badge">
           <span className="live-indicator">LIVE</span>
-          <span className="last-scan">2 min ago</span>
+          <span className="last-scan"> 2 min ago</span> {/* last scan will change when the api updates */}
         </div>
       </header>
 
       {/* Description */}
-      <div className="db-description">
+      <div className="db-description">  
         AI-powered analysis of financial articles across stocks and real estate. Search for any asset to see sentiment scores and actionable recommendations.
       </div>
 
