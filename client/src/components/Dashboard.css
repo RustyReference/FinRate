@@ -1,0 +1,199 @@
+.dashboard-layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.db-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.db-brand {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.db-logo {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-green-bg);
+  border: 1px solid var(--color-green-border);
+  color: var(--color-green);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.db-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.db-brand-text h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.db-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.db-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.live-indicator {
+  padding: 0.375rem 0.875rem;
+  border-radius: 99px;
+  border: 1px solid var(--color-green-border);
+  color: var(--color-green);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.last-scan {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: pre-line;
+  text-align: right;
+}
+
+.last-scan::before {
+  content: "Last scan\n";
+  color: var(--text-muted);
+}
+
+/* Description */
+.db-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Search Bar */
+.db-search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.875rem 1rem;
+  margin-bottom: 2.5rem;
+  transition: border-color 0.2s;
+}
+
+.db-search-bar:focus-within {
+  border-color: var(--border-hover);
+}
+
+.search-icon {
+  color: var(--text-secondary);
+  margin-right: 0.75rem;
+}
+
+.db-search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.db-search-bar input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Stats Grid */
+.db-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  margin-top: -8px; /* Alignment tweak */
+}
+
+.icon-bullish { color: var(--color-green); }
+.icon-bearish { color: var(--color-red); }
+.icon-neutral { color: var(--text-secondary); }
+.icon-green { color: var(--color-green); }
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0.125rem;
+}
+
+/* Asset List Header */
+.db-list-header {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.db-list-header h2 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+/* Asset Grid */
+.db-asset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .db-asset-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
