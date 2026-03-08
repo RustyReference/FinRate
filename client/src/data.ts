@@ -16,12 +16,13 @@ export interface AssetAnalysis {
 export const mockData: AssetAnalysis[] = [
   {
     id: "1",
-    name: "NVIDIA Corporation",
-    ticker: "NVDA",
-    currentPrice: 892.40,
-    priceChangePercent: 3.24,
-    sentimentScore: 78,
+    name: "IBM Corporation",
+    ticker: "IBM",
+    currentPrice: 258.85,
+    priceChangePercent: 2.30,
+    sentimentScore: 81,
     recommendation: "strong_buy",
     confidence: 87,
-    llmAnalysis: "Overwhelmingly positive sentiment across 24 analyzed articles. AI infrastructure demand continues to surge with major cloud..."
+    llmAnalysis: "IBM has shown solid momentum entering 2026 driven by strong software revenue and AI adoption which helped the company exceed recent analyst earnings expectations"
   }];
+

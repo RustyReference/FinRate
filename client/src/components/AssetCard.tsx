@@ -18,6 +18,7 @@ interface AssetCardProps {
 
 export const AssetCard: React.FC<AssetCardProps> = ({ asset }) => {
   // Helpers
+  const [expanded, setExpanded] = React.useState(false); // for the click component
   const formatPrice = (price: number, ticker: string) => {
     if (ticker.includes('RE')) {
       return `$${price.toLocaleString()}/sqft`;
@@ -123,11 +124,23 @@ export const AssetCard: React.FC<AssetCardProps> = ({ asset }) => {
       </div>
 
       <div className="ac-analysis">
-        <div className="aca-toggle">
-          <span className="aca-label">AI Analysis</span>
-          <ChevronDown size={14} className="aca-chevron" />
-        </div>
+        <div 
+  className="aca-toggle"
+  onClick={() => setExpanded(prev => !prev)}
+  style={{ cursor: "pointer" }}>
+  <span className="aca-label">AI Analysis</span>
+  <ChevronDown 
+    size={14} 
+    className="aca-chevron"
+    style={{ 
+      transform: expanded ? "rotate(180deg)" : "rotate(0deg)",
+      transition: "transform 0.2s ease"
+    }}
+      />
+      </div>
+      {expanded && (
         <p className="aca-text">{asset.llmAnalysis}</p>
+        )}
       </div>
     </div>
   );

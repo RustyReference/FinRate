@@ -53,28 +53,28 @@ const Dashboard: React.FC = () => {
         <div className="stat-card">
           <TrendingUp className="stat-icon icon-bullish" size={20} />
           <div className="stat-content">
-            <span className="stat-value">3</span>
+            <span className="stat-value">?</span>
             <span className="stat-label">BULLISH</span>
           </div>
         </div>
         <div className="stat-card">
           <TrendingDown className="stat-icon icon-bearish" size={20} />
           <div className="stat-content">
-            <span className="stat-value">2</span>
+            <span className="stat-value">?</span>
             <span className="stat-label">BEARISH</span>
           </div>
         </div>
         <div className="stat-card">
           <FileText className="stat-icon icon-neutral" size={20} />
           <div className="stat-content">
-            <span className="stat-value">19</span>
+            <span className="stat-value">?</span>
             <span className="stat-label">ARTICLES</span>
           </div>
         </div>
         <div className="stat-card">
           <BarChart2 className="stat-icon icon-green" size={20} />
           <div className="stat-content">
-            <span className="stat-value">74%</span>
+            <span className="stat-value">87%</span>
             <span className="stat-label">AVG CONFIDENCE</span>
           </div>
         </div>
