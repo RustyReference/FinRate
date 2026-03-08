@@ -70,6 +70,5 @@ def search_stock(request: Item):
         action = "hold"
 
     return {
-        'score': investment_score,
         'action': action
     }
